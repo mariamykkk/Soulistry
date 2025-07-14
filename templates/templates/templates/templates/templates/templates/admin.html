@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Admin Panel</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th><th>Blood Type</th><th>Eye Color</th><th>Origin</th><th>Mood</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for melody in melodies %}
+    <tr>
+      <td>{{ melody.user.name }}</td>
+      <td>{{ melody.blood_type }}</td>
+      <td>{{ melody.eye_color }}</td>
+      <td>{{ melody.origin }}</td>
+      <td>{{ melody.mood }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

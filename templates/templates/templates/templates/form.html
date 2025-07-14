@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Enter Your Data</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.blood_type.label }} {{ form.blood_type(class="form-control") }}
+    {{ form.eye_color.label }} {{ form.eye_color(class="form-control") }}
+    {{ form.origin.label }} {{ form.origin(class="form-control") }}
+    {{ form.mood.label }} {{ form.mood(class="form-control") }}
+    {{ form.submit(class="btn btn-success mt-2") }}
+</form>
+{% endblock %}
